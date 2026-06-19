@@ -79,6 +79,26 @@ Not required yet for Phase 0 (no backend is connected). Phase 1 will add
 Supabase environment variables — see [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md)
 for the full list and setup steps once that phase lands.
 
+## Live preview (GitHub Pages)
+
+For early-phase reviewing only, this repo is configured to publish a
+static export to GitHub Pages via `.github/workflows/deploy-pages.yml` on
+every push to `main` or the current dev branch. Once Pages is enabled in
+the repo's Settings → Pages (Source: "GitHub Actions"), it will be live at:
+
+```
+https://bergetson.github.io/Registered-Agent-Software/
+```
+
+**This only works while the app has no server-side features.** GitHub
+Pages serves static files only — it cannot run Supabase Auth session
+handling, API routes, server actions, or file uploads. `next.config.ts`
+uses `output: "export"` to produce a static build. Once Phase 1
+(authentication) needs real server-side logic, this static export will
+need to be revisited — either by moving to a Node-capable host (e.g.
+Vercel) or by keeping auth fully client-side. Until then, this is a
+convenient way to click through the UI shell without running it locally.
+
 ## Project structure
 
 ```
