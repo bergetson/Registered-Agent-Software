@@ -83,8 +83,8 @@ for the full list and setup steps once that phase lands.
 
 For early-phase reviewing only, this repo is configured to publish a
 static export to GitHub Pages via `.github/workflows/deploy-pages.yml` on
-every push to `main` or the current dev branch. Once Pages is enabled in
-the repo's Settings → Pages (Source: "GitHub Actions"), it will be live at:
+every push to `main` or the current dev branch. Pages is enabled
+(Source: "GitHub Actions"), and it is live at:
 
 ```
 https://bergetson.github.io/Registered-Agent-Software/
